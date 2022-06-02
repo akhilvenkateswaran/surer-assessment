@@ -95,10 +95,10 @@ export class ListEventsComponent {
               })
             }
             this.events.push(this.details)
-            this.source.load(this.events)
             this.details = {name: '', date: '',description: ''}
 
           });
+          this.source.load(this.events)
           this.events = []
     },
     
