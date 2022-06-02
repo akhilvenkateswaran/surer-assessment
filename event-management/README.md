@@ -6,11 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Clone the repository.
 2. cd event-management
-3. Run npm install command to install all required dependenices(node_modules)
-4. Run the development server using npm start
+3. Run `npm install` command to install all required dependenices from package.json file(node_modules)
+4. Run `npm start` for a dev server. Navigate to `http://localhost:4200/
 
-## Code scaffolding
+## Test
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The code was executed and tested in following browsers in both desktop and mobile versions.
 
+1. Google Chrome (Version 102.0.5005.63)
+2. Microsoft Edge (Version 102.0.1245.30)
 
