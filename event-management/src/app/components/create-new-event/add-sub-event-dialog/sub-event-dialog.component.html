@@ -6,7 +6,7 @@
           <div class="col-sm-12">
               <div class="form-group">
                 <label for="inputFirstName" class="label asterisk-required">{{stringsList.fieldLabels.name}}</label>
-                <input type="text" nbInput autocomplete="off" autocorrect="off" formControlName="name" fullWidth id="inputEventName" placeholder="Event Name" [status]="detailsList.get('name').invalid && isSubmit ? 'danger' : ''">
+                <input type="text" nbInput autocomplete="off" autocorrect="off" formControlName="name" autocomplete="off" autocorrect="off" fullWidth id="inputEventName" placeholder="Event Name" [status]="detailsList.get('name').invalid && isSubmit ? 'danger' : ''">
                 <div *ngIf="detailsList.get('name').invalid && (detailsList.get('name').dirty || detailsList.get('name').touched || isSubmit)" class="alert-msg">
                   <small class="text-danger" *ngIf="detailsList.get('name').hasError('required')">
                     {{stringsList.errorMessages.name}}
@@ -22,7 +22,7 @@
           <div class="col-sm-6">
               <div class="form-group">
                 <label for="inputLastName" class="label asterisk-required">{{stringsList.fieldLabels.dateFrom}}</label>
-                <input type="date" min="{{minDate}}" autocomplete="off" autocorrect="off" nbInput fullWidth formControlName="startDate" id="inputStartDate" placeholder="Event Start Date" [status]="detailsList.get('startDate').invalid && isSubmit ? 'danger' : ''">
+                <input type="date" min="{{minDate}}" autocomplete="off" autocorrect="off" nbInput autocomplete="off" autocorrect="off" fullWidth formControlName="startDate" id="inputStartDate" placeholder="Event Start Date" [status]="detailsList.get('startDate').invalid && isSubmit ? 'danger' : ''">
                 <div *ngIf="detailsList.get('startDate').invalid && (detailsList.get('startDate').dirty || detailsList.get('startDate').touched || isSubmit)" class="alert-msg">
                   <small class="text-danger" *ngIf="detailsList.get('startDate').hasError('required')">
                     {{stringsList.errorMessages.dateFrom}}
@@ -33,7 +33,7 @@
           <div class="col-sm-6">
           <div class="form-group">
               <label for="inputLastName" class="label asterisk-required">{{stringsList.fieldLabels.dateTo}}</label>
-              <input type="date" min="{{minDate}}" nbInput autocomplete="off" autocorrect="off" fullWidth formControlName="endDate" id="inputEndDate" placeholder="Event End Date" [status]="detailsList.get('endDate').invalid && isSubmit ? 'danger' : ''">
+              <input type="date" min="{{minDate}}" nbInput autocomplete="off" autocorrect="off" fullWidth autocomplete="off" autocorrect="off" formControlName="endDate" id="inputEndDate" placeholder="Event End Date" [status]="detailsList.get('endDate').invalid && isSubmit ? 'danger' : ''">
               <div *ngIf="detailsList.get('endDate').invalid && (detailsList.get('endDate').dirty || detailsList.get('endDate').touched || isSubmit)" class="alert-msg">
                 <small class="text-danger" *ngIf="detailsList.get('endDate').hasError('required')">
                   {{stringsList.errorMessages.dateTo}}
@@ -47,7 +47,7 @@
         <div class="col-sm-6">
           <div class="form-group">
             <label for="inputEmail" class="label asterisk-required">{{stringsList.fieldLabels.description}}</label>
-            <input type="text" nbInput fullWidth  autocomplete="off" autocorrect="off" formControlName="description" id="inputDescription" placeholder="Event Description" [status]="detailsList.get('description').invalid && isSubmit ? 'danger' : ''">
+            <input type="text" nbInput fullWidth  autocomplete="off" autocorrect="off" formControlName="description" autocomplete="off" autocorrect="off" id="inputDescription" placeholder="Event Description" [status]="detailsList.get('description').invalid && isSubmit ? 'danger' : ''">
             <div *ngIf="detailsList.get('description').invalid && (detailsList.get('description').dirty || detailsList.get('description').touched || isSubmit)" class="alert-msg">
               <small class="text-danger" *ngIf="detailsList.get('description').hasError('required') && isSubmit">
                 {{stringsList.errorMessages.description}}
@@ -61,7 +61,7 @@
         <div class="col-sm-6">
           <div class="form-group">
             <label for="inputWebsite" class="label">{{stringsList.fieldLabels.time}}</label>
-            <input type="text" nbInput #timing autocomplete="off" autocorrect="off" formControlName="time" fullWidth id="inputTiming" placeholder="Event Timing" status="">
+            <input type="text" nbInput #timing autocomplete="off" autocorrect="off" formControlName="time" fullWidth autocomplete="off" autocorrect="off" id="inputTiming" placeholder="Event Timing" status="">
           </div>
         </div>
       </div>
