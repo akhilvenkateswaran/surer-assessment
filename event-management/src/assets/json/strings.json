@@ -1,0 +1,28 @@
+{
+  "fieldLabels": {
+    "mainTitle":"Event Management",
+    "headerEvent":"Enter event details to create a new event",
+    "headerSubEvent":"Enter event details to create a new sub event",
+    "name":"Name",
+    "description":"Description",
+    "dateFrom":"Start Date",
+    "dateTo":"End Date",
+    "time": "Time",
+    "search": "Search",
+    "upcoming": "Display only upcoming events (within 3 months)"
+  },
+  "errorMessages": {
+    "name":"Please enter the name",
+    "description":"Please enter the description",
+    "dateFrom":"Please enter the start date",
+    "dateTo":"Please enter the end date",
+    "nameLength":"Please enter a minimum of 5 characters and maximum of 256 chars",
+    "descriptionLength":"Please enter a minimum of 5 characters"
+  },
+  "buttons": {
+    "submit":"Submit",
+    "addSubEvent": "Add Sub Event"
+  }
+  
+  
+}

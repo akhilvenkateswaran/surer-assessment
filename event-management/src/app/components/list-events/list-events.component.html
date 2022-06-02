@@ -1,0 +1,30 @@
+<nb-card>
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="searchForm">
+                <div class="text-center searchBar">
+                    <input #search nbInput formControlName="search" class="search" type="text" placeholder="Filter events..." [status]="searchForm.get('search').invalid && isSubmit ? 'danger' : ''">
+                    <button type="submit" (click) = "onSearch(search.value)" nbButton class="searchButton">{{stringsList.fieldLabels.search}}</button>    
+                </div>
+               
+            </form>
+            <div class="text-center recentCheckBox">
+                <nb-checkbox status="basic" (change)="toggle($event)">{{stringsList.fieldLabels.upcoming}}</nb-checkbox>
+            </div>
+            
+            <ng2-smart-table [settings]="settings" [source]="source">
+            </ng2-smart-table>
+            
+        </div>
+    </div>  
+</nb-card>
+<ng-template #contentTemplate let-data>
+    <div class="text-center">
+      <img src="/assets/img/failure.png" width="40" height="40"/>
+      <div>
+        <p class="failure-text">{{ data.text }}</p>
+      </div>
+      
+    </div>
+    
+  </ng-template>

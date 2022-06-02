@@ -1,0 +1,38 @@
+nb-checkbox {
+    margin-bottom: 1rem;
+  }
+  
+  .form-inline [fullWidth] {
+    flex: 1;
+  }
+  
+  .form-inline > * {
+    margin: 0 1.5rem 1.5rem 0;
+  }
+  
+  nb-card.inline-form-card nb-card-body {
+    padding-bottom: 0;
+  }
+
+  .add-sub-event{
+      float: right;
+  }
+  label.asterisk-required::after {
+    content: " *"; 
+  }
+  .event-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .label {
+    padding-bottom: 10px;
+  }
+  .form-group {
+    padding-bottom: 10px;
+  }
+
+  
+  
+
+  

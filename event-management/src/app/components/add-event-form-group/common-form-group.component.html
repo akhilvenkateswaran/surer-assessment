@@ -1,0 +1,59 @@
+<nb-card-body>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="inputFirstName" class="label">Name</label>
+              <input type="text" nbInput formControlName="name" fullWidth id="inputEventName" placeholder="Event Name" [status]="detailsList.get('name').invalid && isSubmit ? 'danger' : ''">
+              <div *ngIf="detailsList.get('name').invalid && (detailsList.get('name').dirty || detailsList.get('name').touched || isSubmit)" class="alert-msg">
+                <small class="text-danger" *ngIf="detailsList.get('name').hasError('required')">
+                      Please enter the name
+                </small>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="inputLastName" class="label">Start Date</label>
+              <input type="date" min="{{minDate}}" nbInput fullWidth formControlName="startDate" id="inputStartDate" placeholder="Event Start Date" [status]="detailsList.get('startDate').invalid && isSubmit ? 'danger' : ''">
+              <div *ngIf="detailsList.get('name').invalid && (detailsList.get('name').dirty || detailsList.get('name').touched || isSubmit)" class="alert-msg">
+                <small class="text-danger" *ngIf="detailsList.get('startDate').hasError('required')">
+                      Please enter the start date
+                </small>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-6">
+        <div class="form-group">
+            <label for="inputLastName" class="label">End Date</label>
+            <input type="date" min="{{minDate}}" nbInput fullWidth formControlName="endDate" id="inputEndDate" placeholder="Event End Date" [status]="detailsList.get('endDate').invalid && isSubmit ? 'danger' : ''">
+            <div *ngIf="detailsList.get('name').invalid && (detailsList.get('name').dirty || detailsList.get('name').touched || isSubmit)" class="alert-msg">
+              <small class="text-danger" *ngIf="detailsList.get('endDate').hasError('required')">
+                    Please enter the end date
+              </small>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputEmail" class="label">Description</label>
+          <input type="text" nbInput fullWidth formControlName="description" id="inputDescription" placeholder="Event Description" [status]="detailsList.get('description').invalid && isSubmit ? 'danger' : ''">
+          <div *ngIf="detailsList.get('name').invalid && (detailsList.get('name').dirty || detailsList.get('name').touched || isSubmit)" class="alert-msg">
+            <small class="text-danger" *ngIf="detailsList.get('description').hasError('required')">
+                  Please enter the description
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite" class="label">Time</label>
+          <input type="text" nbInput #timing fullWidth id="inputTiming" placeholder="Event Timing">
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
