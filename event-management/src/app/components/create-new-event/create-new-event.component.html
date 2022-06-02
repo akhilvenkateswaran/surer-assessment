@@ -25,7 +25,7 @@
                       <div class="col-sm-6">
                           <div class="form-group">
                             <label for="inputLastName" class="label asterisk-required">{{stringsList.fieldLabels.dateFrom}}</label>
-                            <input type="date" min="{{minDate}}" nbInput fullWidth formControlName="startDate" id="inputStartDate" placeholder="Event Start Date" [status]="detailsList.get('startDate').invalid && isSubmit ? 'danger' : ''">
+                            <input type="date" min="{{minDate}}" nbInput fullWidth autocomplete="off" autocorrect="off" formControlName="startDate" id="inputStartDate" placeholder="Event Start Date" [status]="detailsList.get('startDate').invalid && isSubmit ? 'danger' : ''">
                             <div *ngIf="detailsList.get('startDate').invalid && (detailsList.get('startDate').dirty || detailsList.get('startDate').touched || isSubmit)" class="alert-msg">
                               <small class="text-danger" *ngIf="detailsList.get('startDate').hasError('required')">
                                 {{stringsList.errorMessages.dateFrom}}
@@ -36,7 +36,7 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                           <label for="inputLastName" class="label asterisk-required">{{stringsList.fieldLabels.dateTo}}</label>
-                          <input type="date" min="{{minDate}}" nbInput fullWidth formControlName="endDate" id="inputEndDate" placeholder="Event End Date" [status]="detailsList.get('endDate').invalid && isSubmit ? 'danger' : ''">
+                          <input type="date" min="{{minDate}}" nbInput fullWidth autocomplete="off" autocorrect="off" formControlName="endDate" id="inputEndDate" placeholder="Event End Date" [status]="detailsList.get('endDate').invalid && isSubmit ? 'danger' : ''">
                           <div *ngIf="detailsList.get('endDate').invalid && (detailsList.get('endDate').dirty || detailsList.get('endDate').touched || isSubmit)" class="alert-msg">
                             <small class="text-danger" *ngIf="detailsList.get('endDate').hasError('required')">
                               {{stringsList.errorMessages.dateTo}}
@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="inputEmail" class="label asterisk-required">{{stringsList.fieldLabels.description}}</label>
-                        <input type="text" nbInput fullWidth formControlName="description" id="inputDescription" placeholder="Event Description" [status]="detailsList.get('description').invalid && isSubmit ? 'danger' : ''">
+                        <input type="text" nbInput fullWidth formControlName="description" autocomplete="off" autocorrect="off" id="inputDescription" placeholder="Event Description" [status]="detailsList.get('description').invalid && isSubmit ? 'danger' : ''">
                         <div *ngIf="detailsList.get('description').invalid && (detailsList.get('description').dirty || detailsList.get('description').touched || isSubmit)" class="alert-msg">
                           <small class="text-danger" *ngIf="detailsList.get('description').hasError('required') && isSubmit">
                             {{stringsList.errorMessages.description}}
@@ -64,7 +64,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="inputWebsite" class="label">{{stringsList.fieldLabels.time}}</label>
-                        <input type="text" nbInput fullWidth formControlName="time" id="inputTiming" placeholder="Event Timing" status="">
+                        <input type="text" nbInput fullWidth formControlName="time" id="inputTiming" autocomplete="off" autocorrect="off" placeholder="Event Timing" status="">
                       </div>
                     </div>
                   </div>
@@ -101,7 +101,7 @@
 </div>
 <ng-template #contentTemplate let-data>
   <div class="text-center">
-    <img src="/assets/img/failure.png" width="40" height="40"/>
+    <img src="/assets/img/success_final.png" width="40" height="40"/>
     <div>
       <p class="success-text">{{ data.text }}</p>
     </div>
