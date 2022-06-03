@@ -1,6 +1,6 @@
 # EventManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6 and [Node] version 14.16.0.
 
 ## Instructions
 
