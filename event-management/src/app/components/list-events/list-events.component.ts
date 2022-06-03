@@ -1,7 +1,6 @@
 import { Component, ElementRef, TemplateRef, ViewChild } from "@angular/core";
 import { LocalDataSource } from "ng2-smart-table";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { OAuthService } from "angular-oauth2-oidc";
 import { environment } from "src/environments/environment";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { NbWindowControlButtonsConfig, NbWindowService } from "@nebular/theme";
@@ -24,6 +23,10 @@ export class ListEventsComponent {
     checked: boolean = false
     settings = {
         actions: false,
+        pager : {
+          display : true,
+          perPage:5
+      },
         columns: {
         
           name: {
@@ -48,7 +51,6 @@ export class ListEventsComponent {
       };
       constructor(
         private httpClient: HttpClient,
-        private oAuthService: OAuthService,
         private fb: FormBuilder,
         private nbWindowService: NbWindowService) {
       }
@@ -92,6 +94,7 @@ export class ListEventsComponent {
                   + element.dateFrom.split("T")[0] + ' to ' + element.dateTo.split("T")[0]
                   + String.fromCharCode(10)
                   + element.time
+                  + String.fromCharCode(10)
               })
             }
             this.events.push(this.details)
