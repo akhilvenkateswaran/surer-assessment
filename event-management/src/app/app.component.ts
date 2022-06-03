@@ -29,10 +29,10 @@
     }
  
     constructor(private oAuthService: OAuthService) {
-      // this.oAuthService.configure(authCodeFlowConfig)
-      // this.oAuthService.loadDiscoveryDocumentAndLogin().then(response => {    
-      //   console.log(this.oAuthService.getIdentityClaims())
-      // })
+      this.oAuthService.configure(authCodeFlowConfig)
+      this.oAuthService.loadDiscoveryDocumentAndLogin().then(response => {    
+        console.log(this.oAuthService.getIdentityClaims())
+      })
     }
  }
  
