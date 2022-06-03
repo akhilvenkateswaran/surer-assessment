@@ -20,6 +20,7 @@ export class CreateNewEventComponent extends CommonFormGroup {
     source: LocalDataSource = new LocalDataSource();
     stringsList = strings;
     createSuccess: boolean = false;
+    imgSrc = ''
     @ViewChild('contentTemplate', { static: true }) contentTemplate: TemplateRef<any>;
     isSubmit: boolean = false;
     minDate: any = new Date().toISOString().split('T')[0]
@@ -104,12 +105,16 @@ export class CreateNewEventComponent extends CommonFormGroup {
         if(!this.detailsList.invalid) {
             this.httpClient.post(url,postData).subscribe(
               (success)=>{
+                  this.imgSrc = '/assets/img/success_final.png'
                   this.showStatusDialog('Success','Event has been created successfully')
               },
               (error)=>{
+                this.imgSrc = '/assets/img/failure.png'
                 this.showStatusDialog('Error','Error in creating an event. Please try again.')
               })
         }
+        
+
    }
     
     showStatusDialog(title,message) {
